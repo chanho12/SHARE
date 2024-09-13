@@ -210,7 +210,8 @@ def generate(
         max_new_tokens=max_new_tokens,
         encoder_repetition_penalty=0.8,
         repetition_penalty = 1.5,
-        min_length = 15
+        min_length = 15,
+        pad_token_id = tokenizer.pad_token_id
         )
     result = tokenizer.batch_decode(
         generate_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False
